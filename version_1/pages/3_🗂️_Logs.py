@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import csv
 
 # Define column headers
 logs_headers = ["Date", "Time", "Severity", "Facility", "Source", "Message",""]
