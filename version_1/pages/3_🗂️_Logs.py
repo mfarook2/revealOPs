@@ -7,7 +7,7 @@ raw_logs_headers = ["Raw Log"]
 debugging_headers = ["Root Cause"]
 
 # Create sample data
-logs_data = [
+tmp_logs_data = [
     ["2024-01-01", "12:00:00", "INFO", "SYSLOG", "Router1", "Interface up"],
     ["2024-01-01", "12:01:00", "WARNING", "SYSLOG", "Router2", "High CPU usage"],
     ["2024-01-01", "12:02:00", "ERROR", "SYSLOG", "Router3", "Interface down"],
@@ -68,7 +68,10 @@ tab1, tab2, tab3 = st.tabs(["Logs", "Raw Logs", "Root Cause"])
 # Add data to each tab
 with tab1:
     st.write("**Logs**")
-    st.table(pd.DataFrame(logs_data, columns=logs_headers))
+    file_path = 'https://github.com/mfarook2/revealOPs/edit/test/version_1/data/summary.csv'  # Replace with your file path
+    logs_data = read_data_from_file(file_path)
+    #print(logs_data)
+    st.table(pd.DataFrame(logs_data, columns=logs_headers,))
 
 with tab2:
     st.write("**Raw Logs**")
