@@ -51,6 +51,17 @@ debugging_data = [
     # ... (rest of the data)
 ]
 
+def read_data_from_file(file_path):
+    data = []
+    try:
+        with open(file_path, 'r') as file:
+            reader = csv.reader(file)
+            for row in reader:
+                data.append(row)
+        return data
+    except FileNotFoundError:
+        print("File not found. Please check the file path.")
+
 # Add CSS for tab border and grey background
 st.markdown("""
     <style>
