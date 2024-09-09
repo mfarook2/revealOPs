@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 
 # Define column headers
-logs_headers = ["Date", "Time", "Severity", "Facility", "Source", "Message"]
+logs_headers = ["Date", "Time", "Severity", "Facility", "Source", "Message",""]
 raw_logs_headers = ["Raw Log"]
 debugging_headers = ["Root Cause"]
 
