@@ -7,4 +7,4 @@
 "<190>Jan  1 12:06:00 Router1 %SYS-5-CONFIG_I: Configured from console",
 "<189>Jan  1 12:07:00 Router2 %SYS-3-CPU_HOG: CPU utilization 99%",
 "<188>Jan  1 12:08:00 Router3 %LINK-3-UPDOWN: Interface down",
-"<190>Jan  1 12:09:00 Router1 %SYS-5-CONFIG_I: Configured from console"
+"<190>Jan  1 12:09:00 Router1 %SYS-5-CONFIG_I: Configured from console",
