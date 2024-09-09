@@ -81,7 +81,8 @@ tab1, tab2, tab3 = st.tabs(["Logs", "Raw Logs", "Root Cause"])
 with tab1:
     st.write("**Logs**")
     file_path = 'https://raw.githubusercontent.com/mfarook2/revealOPs/test/version_1/data/summary.csv'  # Replace with your file path
-    logs_data = read_data_from_file(file_path)
+    #logs_data = read_data_from_file(file_path)
+    logs_data = pd.read_csv(file_path)
     #print(logs_data)
     st.table(pd.DataFrame(logs_data, columns=logs_headers,))
 
