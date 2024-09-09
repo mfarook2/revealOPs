@@ -80,7 +80,7 @@ tab1, tab2, tab3 = st.tabs(["Logs", "Raw Logs", "Root Cause"])
 # Add data to each tab
 with tab1:
     st.write("**Logs**")
-    file_path = 'mfarook2/revealOPs/version_1/data/summary.csv'  # Replace with your file path
+    file_path = '../data/summary.csv'  # Replace with your file path
     logs_data = read_data_from_file(file_path)
     #print(logs_data)
     st.table(pd.DataFrame(logs_data, columns=logs_headers,))
