@@ -87,7 +87,6 @@ with tab1:
     #logs_data = read_data_from_file(file_path)
     if response.status_code == 200:
         logs_data = pd.read_csv(StringIO(response.text))
-        st.write(len(logs_data))
         st.table(pd.DataFrame(logs_data, columns=logs_headers,))
     else:
         st.error("Failed to load data from GitHub.")
