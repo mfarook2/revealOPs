@@ -82,11 +82,13 @@ tab1, tab2, tab3 = st.tabs(["Logs", "Raw Logs", "Root Cause"])
 # Add data to each tab
 with tab1:
     st.write("**Logs**")
-    file_path = 'https://raw.githubusercontent.com/mfarook2/revealOPs/test/version_1/data/summary.csv?raw=true'
+    file_path = 'https://raw.githubusercontent.com/mfarook2/revealOPs/test/version_1/data/summary.csv'
     response = requests.get(file_path)
     #logs_data = read_data_from_file(file_path)
     if response.status_code == 200:
         logs_data = pd.read_csv(StringIO(response.text))
+        st.write(len(logs_data))
+        st.table(pd.DataFrame(logs_data, columns=logs_headers,))
     else:
         st.error("Failed to load data from GitHub.")
     #logs_data = pd.read_csv(file_path)
